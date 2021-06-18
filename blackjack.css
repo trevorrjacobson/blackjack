@@ -34,11 +34,11 @@ header {
 }
 
 .background {
-    background-image: img src="pokertable.jpg";
+    background-image: url(https://www.pokertablematerials.com/images/categories/621.jpg);
 }
 
 .someHeight {
-    min-height: 150px;
+    min-height: 650px;
 }
 
 .deck {
