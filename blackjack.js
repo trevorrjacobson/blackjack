@@ -1,9 +1,12 @@
 let deck = [];
-let discard = [];
+let discardPile = [];
 let pHand = [];
 let cHand = [];
 let suitList = ["club", "heart", "diamond", "spade"];
 let faceList = ["jack", "queen", "king"];
+let wins;
+let losses;
+let ties;
 for (let i = 0; i < 4; i++) {
     for (let j = 2; j <= 10; j++) {
         deck.push({ value: j, face: j, suit: suitList[i] })
@@ -26,7 +29,35 @@ function shuffle(array) {
 }
 
 function deal(hand) {
+    if (deal.length < 10) {
+        refill();
+    }
     hand.push(deck.pop())
+
+}
+
+function discard() {
+    while (pHand.length > 0) {
+        discardPile.push(pHand.pop())
+    }
+    while (cHand.length > 0) {
+        discardPile.push(cHand.pop())
+    }
+}
+
+function refill() {
+    while (discardPile.length > 0) {
+        deck.push(discardPile.pop())
+    }
+    shuffle(deck);
+}
+
+function checkScore(hand) {
+    let total = 0
+    for (let i = 0; i < hand.length; i++) {
+        total += hand[i].value;
+    }
+    return;
 
 }
 deal(pHand);
