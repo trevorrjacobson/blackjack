@@ -12,35 +12,26 @@
 
 <body>
     <header class="flex">
-        <div class="flex">
-            <div class="flex">
-                <h1 class="textCenter" class="title">Blackjack! (21)</h1>
-                <div class="flex">
-                    <div class="textCenter score">
-                        Wins! <span id="wins">0</span>
-                    </div>
-                    <div class="textCenter score">
-                        Ties! <span id="ties">0</span>
-                    </div>
-                    <div class="textCenter score">
-                        Losses <span id="losses">0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 class="title" class="textCenter">Blackjack!(21)</h1>
+        <div class="br"></div>
+        <div class="textCenter"> Wins: <span id="wins">0</span> Losses: <span id="losses">0</span> Ties: <span id="ties">0</span></div>
+
     </header>
+    <main class="background">
+        <div>
+            <div class="hand" id="compHand">
 
-    <main id="table" class="background" class="flex">
-        <div class="someHeight"></div>
+            </div>
+            <div class="hand" id="playHand">
+            </div>
 
 
-
-        <button type="button" class="btn btn-warning">Start Game!</button>
-
-
-
+            <button type="button" id="stay" class="btn btn-warning">Stay</button>
+            <button type="button" id="hit" class="btn btn-warning">Hit</button>
+            <button type="button" id="newGame" class="btn btn-warning">Deal!</button>
+            <script src="./blackjack.js"></script>
     </main>
-    <script src="./blackjack.js"></script>
+
 </body>
 
 </html>
