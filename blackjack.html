@@ -2,36 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="blackjack.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="blackjack.css" />
 </head>
 
 <body>
-    <header class="flex">
-        <h1 class="title" class="textCenter">Blackjack!(21)</h1>
-        <div class="br"></div>
-        <div class="textCenter"> Wins: <span id="wins">0</span> Losses: <span id="losses">0</span> Ties: <span id="ties">0</span></div>
-
-    </header>
-    <main class="background">
+    <div class="verification textCenter" id="verification">
         <div>
-            <div class="hand" id="compHand">
+            <div>Enter your name and birthday:</div>
+            <div class="flex justifyCenter">
+                <label class="margin5" for="name">Name:</label>
+                <input class="margin5" type="text" id="name" placeholder="Name" />
+                <div>
+                    <label class="margin5" for="birthMonths">Birthday :</label>
+                    <select class="margin5" id="birthMonths">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <select class="margin5" id="birthDay"></select>
+                    <select class="margin5" id="birthYear"></select>
+
+                    <input class="margin5" id="submit" type="submit" />
+                </div>
+            </div>
+        </div>
+        <div class="hide" id="messageBox"></div>
+    </div>
+    <header class="justifyCenter">
+        <h1 class="title textCenter">Blackjack! (21)</h1>
+        <img class="deck z1 left80" src="images/cardback.png" />
+        <img class="deck z2 left82" src="images/cardback.png" />
+        <img class="deck z3 left84" id="almostEmpty" src="images/cardback.png" />
+        <img class="deck z4 left86 topHalf" src="images/cardback.png" />
+        <img class="deck z5 left88 topHalf" src="images/cardback.png" />
+        <img class="deck z6 left90 topHalf" src="images/cardback.png" />
+        <div class="margin5">
+            <input type="radio" id="oneDeck" name="deckSize" value="1" checked />
+            <label for="oneDeck">One Deck</label><br />
+        </div>
+        <div class="margin5">
+            <input type="radio" id="threeDeck" name="deckSize" value="3" />
+            <label for="threeDeck">Three Decks</label>
+        </div>
+
+        <div class="textCenter marginTop15">
+            Wins: <span id="wins">0</span> Losses: <span id="losses">0</span> Ties:
+            <span id="ties">0</span>
+        </div>
+    </header>
+    <main class="backgroundImage">
+        <div>
+            <div class="textCenter">
+                Computer Total: <span class="hide" id="computerTotal">0</span>
+            </div>
+            <div class="hand flex marginBot50 width80Percent center" id="compHand"></div>
+            <div class="textCenter">
+                Player total: <span id="playerTotal">0</span>
+            </div>
+            <div class="hand flex width80Percent center marginBot5" id="playHand"></div>
+            <div class="flex spaceEvenly width80Percent center">
+                <button class="playerButton btn btn-warning" id="stay">Stay</button>
+                <button class="playerButton btn btn-warning" id="hit">Hit</button>
+                <button class="playerButton btn btn-warning" id="newGame">Deal</button>
 
             </div>
-            <div class="hand" id="playHand">
-            </div>
-
-
-            <button type="button" id="stay" class="btn btn-warning">Stay</button>
-            <button type="button" id="hit" class="btn btn-warning">Hit</button>
-            <button type="button" id="newGame" class="btn btn-warning">Deal!</button>
-            <script src="./blackjack.js"></script>
+        </div>
     </main>
 
+    <script src="blackjack.js"></script>
 </body>
 
 </html>

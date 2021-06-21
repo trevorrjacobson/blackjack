@@ -1,81 +1,190 @@
 .card {
-    width: 100px;
-    height: 200px;
-    line-height: 200px;
+    flex-basis: calc(100% / 6 - 10px);
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 5px;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}
+
+.hand {
+    margin-top: 5px;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 115px;
+    border: black 2px solid;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marginBot50 {
+    margin-bottom: 50px;
+}
+
+.marginBot5 {
+    margin-bottom: 5px;
 }
 
 .textCenter {
     text-align: center;
-    justify-content: center;
 }
 
-header {
-    background-color: black;
-    background-image: url(https://image.flaticon.com/icons/png/128/261/261784.png);
-    height: 130px;
+.hide {
+    display: none;
+}
+
+.backgroundImage {
     color: yellow;
-    align-items: flex-start;
-    line-height: 60px;
-    justify-content: center;
-}
-
-.title {
-    font-size: 50px;
-}
-
-.br {
-    width: 100%;
-}
-
-.score {
-    flex-basis: 30%;
-    justify-content: center;
-    font-size: 40px;
-}
-
-.background {
     background-image: url(https://www.pokertablematerials.com/images/categories/621.jpg);
 }
 
-.someHeight {
-    min-height: 650px;
+header {
+    background-image: url(https://image.flaticon.com/icons/png/128/261/261784.png);
+    height: 160px;
+    color: yellow;
+    background-color: black;
+}
+
+.verification {
+    margin: auto;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 7;
+    background-color: white;
+    padding-top: 300px;
+}
+
+.newGameContainer {
+    width: 100%;
 }
 
 .deck {
-    background-image: img src="cardback.png";
+    width: auto;
+    border: 1px black solid;
+    height: 100px;
+    position: fixed;
+    top: 25px;
+    display: none;
 }
 
-.discardPile {
-    background-image: img src="blankcard.png";
+.z1 {
+    z-index: 1;
+}
+
+.z2 {
+    z-index: 2;
+}
+
+.z3 {
+    z-index: 3;
+}
+
+.z4 {
+    z-index: 4;
+}
+
+.z5 {
+    z-index: 5;
+}
+
+.z6 {
+    z-index: 6;
+}
+
+.left80 {
+    left: 80%;
+}
+
+.left82 {
+    left: calc(80% + 2px);
+}
+
+.left84 {
+    left: calc(80% + 4px);
+}
+
+.left86 {
+    left: calc(80% + 6px);
+}
+
+.left88 {
+    left: calc(80% + 8px);
+}
+
+.left90 {
+    left: calc(80% + 10px);
+}
+
+.margin5 {
+    margin: 5px;
 }
 
 .flex {
     display: flex;
     flex-flow: row wrap;
+}
+
+.justifyCenter {
     justify-content: center;
 }
 
-.card {
-    width: 100px;
-    height: 200px;
-    line-height: 200px;
-    text-align: center;
-    margin: 5px;
-    border: black 2px solid;
+.textWhite {
+    color: white;
 }
 
-.hand {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-flow: row wrap;
-    width: 840px;
-    height: 215px;
-    border: black 2px solid;
+.spaceEvenly {
+    justify-content: space-evenly;
 }
 
-.hide {
-    display: none;
+.width80Percent {
+    width: 90%;
+}
+
+.playerButton {
+    width: 25%;
+    height: 40px;
+}
+
+@media (min-width: 600px) {
+    .hand {
+        min-height: 200px;
+    }
+    img {
+        height: 180px;
+    }
+    .card {
+        height: 180px;
+        line-height: 180px;
+    }
+    .draw {
+        display: block;
+    }
+}
+
+@media (min-width: 950px) {
+    .hand {
+        min-height: 250px;
+    }
+    img {
+        height: 225px;
+    }
+    .card {
+        height: 225px;
+        line-height: 225px;
+        margin: 10px 5px 10px 5px;
+    }
+    .playerButton {
+        height: 60px;
+    }
+    .draw {
+        display: block;
+    }
 }
