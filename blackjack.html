@@ -44,12 +44,6 @@
     </div>
     <header class="justifyCenter">
         <h1 class="title textCenter">Blackjack! (21)</h1>
-        <img class="deck z1 left80" src="images/cardback.png" />
-        <img class="deck z2 left82" src="images/cardback.png" />
-        <img class="deck z3 left84" id="almostEmpty" src="images/cardback.png" />
-        <img class="deck z4 left86 topHalf" src="images/cardback.png" />
-        <img class="deck z5 left88 topHalf" src="images/cardback.png" />
-        <img class="deck z6 left90 topHalf" src="images/cardback.png" />
         <div class="margin5">
             <input type="radio" id="oneDeck" name="deckSize" value="1" checked />
             <label for="oneDeck">One Deck</label><br />
@@ -66,6 +60,8 @@
     </header>
     <main class="backgroundImage">
         <div>
+            <img class="deck" src="images/cardback.png" />
+            <img class="deck" src="images/discard.png" />
             <div class="textCenter">
                 Computer Total: <span class="hide" id="computerTotal">0</span>
             </div>
